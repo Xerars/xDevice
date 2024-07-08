@@ -20,47 +20,47 @@ void Seg7_ParseSet(Seg7_t *Seg,SG7_U8 Ch)
 
   switch(Ch)
   { //Num
-    case '0': Seg->Data = (COM)?COMH_0:COML_0;       break;
-    case '1': Seg->Data = (COM)?COMH_1:COML_1;       break;
-    case '2': Seg->Data = (COM)?COMH_2:COML_2;       break;
-    case '3': Seg->Data = (COM)?COMH_3:COML_3;       break;
-    case '4': Seg->Data = (COM)?COMH_4:COML_4;       break;
-    case '5': Seg->Data = (COM)?COMH_5:COML_5;       break;
-    case '6': Seg->Data = (COM)?COMH_6:COML_6;       break;
-    case '7': Seg->Data = (COM)?COMH_7:COML_7;       break;
-    case '8': Seg->Data = (COM)?COMH_8:COML_8;       break;
-    case '9': Seg->Data = (COM)?COMH_9:COML_9;       break;
-    case '.': Seg->Data = (COM)?COMH_DOT:COML_DOT;   break;
+    case '0': Seg->Data = (COM)?COM7H_0:COM7L_0;       break;
+    case '1': Seg->Data = (COM)?COM7H_1:COM7L_1;       break;
+    case '2': Seg->Data = (COM)?COM7H_2:COM7L_2;       break;
+    case '3': Seg->Data = (COM)?COM7H_3:COM7L_3;       break;
+    case '4': Seg->Data = (COM)?COM7H_4:COM7L_4;       break;
+    case '5': Seg->Data = (COM)?COM7H_5:COM7L_5;       break;
+    case '6': Seg->Data = (COM)?COM7H_6:COM7L_6;       break;
+    case '7': Seg->Data = (COM)?COM7H_7:COM7L_7;       break;
+    case '8': Seg->Data = (COM)?COM7H_8:COM7L_8;       break;
+    case '9': Seg->Data = (COM)?COM7H_9:COM7L_9;       break;
+    case '.': Seg->Data = (COM)?COM7H_DOT:COM7L_DOT;   break;
     //High Case
-    case 'A': Seg->Data = (COM)?COMH_A:COML_A;       break;
-    case 'C': Seg->Data = (COM)?COMH_C:COML_C;       break;
-    case 'E': Seg->Data = (COM)?COMH_E:COML_E;       break;
-    case 'F': Seg->Data = (COM)?COMH_F:COML_F;       break;
-    case 'G': Seg->Data = (COM)?COMH_G:COML_G;       break;
-    case 'H': Seg->Data = (COM)?COMH_H:COML_H;       break;
-    case 'I': Seg->Data = (COM)?COMH_I:COML_I;       break;
-    case 'L': Seg->Data = (COM)?COMH_L:COML_L;       break;
-    case 'N': Seg->Data = (COM)?COMH_N:COML_N;       break;
-    case 'O': Seg->Data = (COM)?COMH_O:COML_O;       break;
-    case 'P': Seg->Data = (COM)?COMH_P:COML_P;       break;
-    case 'S': Seg->Data = (COM)?COMH_S:COML_S;       break;
-    case 'Y': Seg->Data = (COM)?COMH_Y:COML_Y;       break;
+    case 'A': Seg->Data = (COM)?COM7H_A:COM7L_A;       break;
+    case 'C': Seg->Data = (COM)?COM7H_C:COM7L_C;       break;
+    case 'E': Seg->Data = (COM)?COM7H_E:COM7L_E;       break;
+    case 'F': Seg->Data = (COM)?COM7H_F:COM7L_F;       break;
+    case 'G': Seg->Data = (COM)?COM7H_G:COM7L_G;       break;
+    case 'H': Seg->Data = (COM)?COM7H_H:COM7L_H;       break;
+    case 'I': Seg->Data = (COM)?COM7H_I:COM7L_I;       break;
+    case 'L': Seg->Data = (COM)?COM7H_L:COM7L_L;       break;
+    case 'N': Seg->Data = (COM)?COM7H_N:COM7L_N;       break;
+    case 'O': Seg->Data = (COM)?COM7H_O:COM7L_O;       break;
+    case 'P': Seg->Data = (COM)?COM7H_P:COM7L_P;       break;
+    case 'S': Seg->Data = (COM)?COM7H_S:COM7L_S;       break;
+    case 'Y': Seg->Data = (COM)?COM7H_Y:COM7L_Y;       break;
     //Low Case
-    case 'b': Seg->Data = (COM)?COMH_b:COML_b;       break;
-    case 'c': Seg->Data = (COM)?COMH_c:COML_c;       break;
-    case 'd': Seg->Data = (COM)?COMH_d:COML_d;       break;
-    case 'g': Seg->Data = (COM)?COMH_g:COML_g;       break;
-    case 'h': Seg->Data = (COM)?COMH_h:COML_h;       break;
-    case 'i': Seg->Data = (COM)?COMH_i:COML_i;       break;
-    case 'j': Seg->Data = (COM)?COMH_j:COML_j;       break;
-    case 'l': Seg->Data = (COM)?COMH_l:COML_l;       break;
-    case 'n': Seg->Data = (COM)?COMH_n:COML_n;       break;
-    case 'o': Seg->Data = (COM)?COMH_o:COML_o;       break;
-    case 'q': Seg->Data = (COM)?COMH_q:COML_q;       break;
-    case 'r': Seg->Data = (COM)?COMH_r:COML_r;       break;
-    case 't': Seg->Data = (COM)?COMH_t:COML_t;       break;
-    case 'u': Seg->Data = (COM)?COMH_u:COML_u;       break;
-    default:  Seg->Data = (COM)?COMH_NONE:COML_NONE; break;
+    case 'b': Seg->Data = (COM)?COM7H_b:COM7L_b;       break;
+    case 'c': Seg->Data = (COM)?COM7H_c:COM7L_c;       break;
+    case 'd': Seg->Data = (COM)?COM7H_d:COM7L_d;       break;
+    case 'g': Seg->Data = (COM)?COM7H_g:COM7L_g;       break;
+    case 'h': Seg->Data = (COM)?COM7H_h:COM7L_h;       break;
+    case 'i': Seg->Data = (COM)?COM7H_i:COM7L_i;       break;
+    case 'j': Seg->Data = (COM)?COM7H_j:COM7L_j;       break;
+    case 'l': Seg->Data = (COM)?COM7H_l:COM7L_l;       break;
+    case 'n': Seg->Data = (COM)?COM7H_n:COM7L_n;       break;
+    case 'o': Seg->Data = (COM)?COM7H_o:COM7L_o;       break;
+    case 'q': Seg->Data = (COM)?COM7H_q:COM7L_q;       break;
+    case 'r': Seg->Data = (COM)?COM7H_r:COM7L_r;       break;
+    case 't': Seg->Data = (COM)?COM7H_t:COM7L_t;       break;
+    case 'u': Seg->Data = (COM)?COM7H_u:COM7L_u;       break;
+    default:  Seg->Data = (COM)?COM7H_NONE:COM7L_NONE; break;
   }
 
   if(Seg->Seq == SEG7_SEQ_A2G)    //a,b,c,d,e,f,g

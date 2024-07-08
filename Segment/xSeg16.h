@@ -19,175 +19,176 @@ typedef signed long     SG16_S32;       //S32
 
 //[Macro Declare]
 //COM High(Sort: . N M L K J H G2 G1 F E D2 D1 C B A2 A1)
-#define COMH_NONE       0x1FFFF         //1-1111-1111-1111-1111
-#define COMH_0          0x1FF00         //1-1111-1111-0000-0000
-#define COMH_1          0x1FFF3         //1-1111-1111-1111-0011
-#define COMH_2          0x1FC88         //1-1111-1100-1000-1000
-#define COMH_3          0x1FCC0         //1-1111-1100-1100-0000
-#define COMH_4          0x1FC73         //1-1111-1100-0111-0011
-#define COMH_5          0x1FC44         //1-1111-1100-0100-0100
-#define COMH_6          0x1FC04         //1-1111-1100-0000-0100
-#define COMH_7          0x1FFF0         //1-1111-1111-1111-0000
-#define COMH_8          0x1FC00         //1-1111-1100-0000-0000
-#define COMH_9          0x1FC40         //1-1111-1100-0100-0000
-#define COMH_DOT        0x0FFFF         //0-1111-1111-1111-1111
+#define COM16H_NONE       0x1FFFF         //1-1111-1111-1111-1111
+#define COM16H_0          0x1FF00         //1-1111-1111-0000-0000
+#define COM16H_1          0x1FFF3         //1-1111-1111-1111-0011
+#define COM16H_2          0x1FC88         //1-1111-1100-1000-1000
+#define COM16H_3          0x1FCC0         //1-1111-1100-1100-0000
+#define COM16H_4          0x1FC73         //1-1111-1100-0111-0011
+#define COM16H_5          0x1FC44         //1-1111-1100-0100-0100
+#define COM16H_6          0x1FC04         //1-1111-1100-0000-0100
+#define COM16H_7          0x1FFF0         //1-1111-1111-1111-0000
+#define COM16H_8          0x1FC00         //1-1111-1100-0000-0000
+#define COM16H_9          0x1FC40         //1-1111-1100-0100-0000
+#define COM16H_DOT        0x0FFFF         //0-1111-1111-1111-1111
 
 //COM Low(Sort: .GFEDCBA)
-#define COML_NONE       ~COMH_NONE      //~(1-1111-1111-1111-1111)
-#define COML_0          ~COMH_0         //~(1-1111-1111-0000-0000)
-#define COML_1          ~COMH_1         //~(1-1111-1111-1111-0011)
-#define COML_2          ~COMH_2         //~(1-1111-1100-1000-1000)
-#define COML_3          ~COMH_3         //~(1-1111-1100-1100-0000)
-#define COML_4          ~COMH_4         //~(1-1111-1100-0111-0011)
-#define COML_5          ~COMH_5         //~(1-1111-1100-0100-0100)
-#define COML_6          ~COMH_6         //~(1-1111-1100-0000-0100)
-#define COML_7          ~COMH_7         //~(1-1111-1111-1111-0000)
-#define COML_8          ~COMH_8         //~(1-1111-1100-0000-0000)
-#define COML_9          ~COMH_9         //~(1-1111-1100-0100-0000)
-#define COML_DOT        ~COMH_DOT       //~(0-1111-1111-1111-1111)
+#define COM16L_NONE       ~COM16H_NONE    //~(1-1111-1111-1111-1111)
+#define COM16L_0          ~COM16H_0       //~(1-1111-1111-0000-0000)
+#define COM16L_1          ~COM16H_1       //~(1-1111-1111-1111-0011)
+#define COM16L_2          ~COM16H_2       //~(1-1111-1100-1000-1000)
+#define COM16L_3          ~COM16H_3       //~(1-1111-1100-1100-0000)
+#define COM16L_4          ~COM16H_4       //~(1-1111-1100-0111-0011)
+#define COM16L_5          ~COM16H_5       //~(1-1111-1100-0100-0100)
+#define COM16L_6          ~COM16H_6       //~(1-1111-1100-0000-0100)
+#define COM16L_7          ~COM16H_7       //~(1-1111-1111-1111-0000)
+#define COM16L_8          ~COM16H_8       //~(1-1111-1100-0000-0000)
+#define COM16L_9          ~COM16H_9       //~(1-1111-1100-0100-0000)
+#define COM16L_DOT        ~COM16H_DOT     //~(0-1111-1111-1111-1111)
 
 //COM High(Advance Sort: . N M L K J H G2 G1 F E D2 D1 C B A2 A1)
-#define COMH_A          0x1FC30             //A
-#define COMH_B          0x1B5C0             //B
-#define COMH_C          0x1FF0C             //C
-#define COMH_D          0x1B7C0             //D
-#define COMH_E          0x1FC0C             //E
-#define COMH_F          0x1FC3C             //F
-#define COMH_G          0x1FD04             //G
-#define COMH_H          0x1FC33             //H
-#define COMH_I          0x1B7CC             //I
-#define COMH_J          0x1B7AC             //J
-#define COMH_K          0x1CE3F             //K
-#define COMH_L          0x1FF0F             //L
-#define COMH_M          0x1AB33             //M
-#define COMH_N          0x1DB33             //N
-#define COMH_O          0x1FF00             //O
-#define COMH_P          0x1FC38             //P
-#define COMH_Q          0x1DF00             //Q
-#define COMH_R          0x1DC38             //R
-#define COMH_S          0x1FC44             //S
-#define COMH_T          0x1B7FC             //T
-#define COMH_U          0x1FF03             //U
-#define COMH_V          0x16F3F             //V
-#define COMH_W          0x15733             //W
-#define COMH_X          0x14BFF             //X
-#define COMH_Y          0x1BC7B             //Y
-#define COMH_Z          0x16FCC             //Z
+#define COM16H_A          0x1FC30             //A
+#define COM16H_B          0x1B5C0             //B
+#define COM16H_C          0x1FF0C             //C
+#define COM16H_D          0x1B7C0             //D
+#define COM16H_E          0x1FC0C             //E
+#define COM16H_F          0x1FC3C             //F
+#define COM16H_G          0x1FD04             //G
+#define COM16H_H          0x1FC33             //H
+#define COM16H_I          0x1B7CC             //I
+#define COM16H_J          0x1B7AC             //J
+#define COM16H_K          0x1CE3F             //K
+#define COM16H_L          0x1FF0F             //L
+#define COM16H_M          0x1AB33             //M
+#define COM16H_N          0x1DB33             //N
+#define COM16H_O          0x1FF00             //O
+#define COM16H_P          0x1FC38             //P
+#define COM16H_Q          0x1DF00             //Q
+#define COM16H_R          0x1DC38             //R
+#define COM16H_S          0x1FC44             //S
+#define COM16H_T          0x1B7FC             //T
+#define COM16H_U          0x1FF03             //U
+#define COM16H_V          0x16F3F             //V
+#define COM16H_W          0x15733             //W
+#define COM16H_X          0x14BFF             //X
+#define COM16H_Y          0x1BC7B             //Y
+#define COM16H_Z          0x16FCC             //Z
 
-#define COMH_a          0x1FC80             //a
-#define COMH_b          0x1FC07             //b
-#define COMH_c          0x1FC8F             //c
-#define COMH_d          0x1FC83             //d
-#define COMH_e          0x1FC08             //e
-#define COMH_f          0x1B4FD             //f
-#define COMH_g          0x1FC40             //g
-#define COMH_h          0x1FC37             //h
-#define COMH_i          0x1BECE             //i
-#define COMH_j          0x1FFC4             //j
-#define COMH_k          0x1DC3F             //k
-#define COMH_l          0x1B7DE             //l
-#define COMH_m          0x1BCB7             //m
-#define COMH_n          0x1FF30             //n
-#define COMH_o          0x1FC87             //o
-#define COMH_p          0x1EE3C             //p
-#define COMH_q          0x1EE70             //q
-#define COMH_r          0x1FCBF             //r
-#define COMH_s          0x1DDCF             //s
-#define COMH_t          0x1B4DF             //t
-#define COMH_u          0x1FF87             //u
-#define COMH_v          0x17FBF             //v
-#define COMH_w          0x15FB7             //w
-#define COMH_x          0x15CFF             //x
-#define COMH_y          0x1F5C3             //y
-#define COMH_z          0x17EEF             //z
+#define COM16H_a          0x1FC80             //a
+#define COM16H_b          0x1FC07             //b
+#define COM16H_c          0x1FC8F             //c
+#define COM16H_d          0x1FC83             //d
+#define COM16H_e          0x1FC08             //e
+#define COM16H_f          0x1B4FD             //f
+#define COM16H_g          0x1FC40             //g
+#define COM16H_h          0x1FC37             //h
+#define COM16H_i          0x1BECE             //i
+#define COM16H_j          0x1FFC4             //j
+#define COM16H_k          0x1DC3F             //k
+#define COM16H_l          0x1B7DE             //l
+#define COM16H_m          0x1BCB7             //m
+#define COM16H_n          0x1FF30             //n
+#define COM16H_o          0x1FC87             //o
+#define COM16H_p          0x1EE3C             //p
+#define COM16H_q          0x1EE70             //q
+#define COM16H_r          0x1FCBF             //r
+#define COM16H_s          0x1DDCF             //s
+#define COM16H_t          0x1B4DF             //t
+#define COM16H_u          0x1FF87             //u
+#define COM16H_v          0x17FBF             //v
+#define COM16H_w          0x15FB7             //w
+#define COM16H_x          0x15CFF             //x
+#define COM16H_y          0x1F5C3             //y
+#define COM16H_z          0x17EEF             //z
 
 
 //COM Low(Advance Sort: . N M L K J H G2 G1 F E D2 D1 C B A2 A1)
-#define COML_A          ~COMH_A            //A
-#define COML_B          ~COMH_B            //B
-#define COML_C          ~COMH_C            //C
-#define COML_D          ~COMH_D            //D
-#define COML_E          ~COMH_E            //E
-#define COML_F          ~COMH_F            //F
-#define COML_G          ~COMH_G            //G
-#define COML_H          ~COMH_H            //H
-#define COML_I          ~COMH_I            //I
-#define COML_J          ~COMH_J            //J
-#define COML_K          ~COMH_K            //K
-#define COML_L          ~COMH_L            //L
-#define COML_M          ~COMH_M            //M
-#define COML_N          ~COMH_N            //N
-#define COML_O          ~COMH_O            //O
-#define COML_P          ~COMH_P            //P
-#define COML_Q          ~COMH_Q            //Q
-#define COML_R          ~COMH_R            //R
-#define COML_S          ~COMH_S            //S
-#define COML_T          ~COMH_T            //T
-#define COML_U          ~COMH_U            //U
-#define COML_V          ~COMH_V            //V
-#define COML_W          ~COMH_W            //W
-#define COML_X          ~COMH_X            //X
-#define COML_Y          ~COMH_Y            //Y
-#define COML_Z          ~COMH_Z            //ZL
-#define COML_a          ~COMH_a            //a
-#define COML_b          ~COMH_b            //b
-#define COML_c          ~COMH_c            //c
-#define COML_d          ~COMH_d            //d
-#define COML_e          ~COMH_e            //e
-#define COML_f          ~COMH_f            //f
-#define COML_g          ~COMH_g            //g
-#define COML_h          ~COMH_h            //h
-#define COML_i          ~COMH_i            //i
-#define COML_j          ~COMH_j            //j
-#define COML_k          ~COMH_k            //k
-#define COML_l          ~COMH_l            //l
-#define COML_m          ~COMH_m            //m
-#define COML_n          ~COMH_n            //n
-#define COML_o          ~COMH_o            //o
-#define COML_p          ~COMH_p            //p
-#define COML_q          ~COMH_q            //q
-#define COML_r          ~COMH_r            //r
-#define COML_s          ~COMH_s            //s
-#define COML_t          ~COMH_t            //t
-#define COML_u          ~COMH_u            //u
-#define COML_v          ~COMH_v            //v
-#define COML_w          ~COMH_w            //w
-#define COML_x          ~COMH_x            //x
-#define COML_y          ~COMH_y            //y
-#define COML_z          ~COMH_z            //z
+#define COM16L_A          ~COM16H_A           //A
+#define COM16L_B          ~COM16H_B           //B
+#define COM16L_C          ~COM16H_C           //C
+#define COM16L_D          ~COM16H_D           //D
+#define COM16L_E          ~COM16H_E           //E
+#define COM16L_F          ~COM16H_F           //F
+#define COM16L_G          ~COM16H_G           //G
+#define COM16L_H          ~COM16H_H           //H
+#define COM16L_I          ~COM16H_I           //I
+#define COM16L_J          ~COM16H_J           //J
+#define COM16L_K          ~COM16H_K           //K
+#define COM16L_L          ~COM16H_L           //L
+#define COM16L_M          ~COM16H_M           //M
+#define COM16L_N          ~COM16H_N           //N
+#define COM16L_O          ~COM16H_O           //O
+#define COM16L_P          ~COM16H_P           //P
+#define COM16L_Q          ~COM16H_Q           //Q
+#define COM16L_R          ~COM16H_R           //R
+#define COM16L_S          ~COM16H_S           //S
+#define COM16L_T          ~COM16H_T           //T
+#define COM16L_U          ~COM16H_U           //U
+#define COM16L_V          ~COM16H_V           //V
+#define COM16L_W          ~COM16H_W           //W
+#define COM16L_X          ~COM16H_X           //X
+#define COM16L_Y          ~COM16H_Y           //Y
+#define COM16L_Z          ~COM16H_Z           //ZL
+
+#define COM16L_a          ~COM16H_a           //a
+#define COM16L_b          ~COM16H_b           //b
+#define COM16L_c          ~COM16H_c           //c
+#define COM16L_d          ~COM16H_d           //d
+#define COM16L_e          ~COM16H_e           //e
+#define COM16L_f          ~COM16H_f           //f
+#define COM16L_g          ~COM16H_g           //g
+#define COM16L_h          ~COM16H_h           //h
+#define COM16L_i          ~COM16H_i           //i
+#define COM16L_j          ~COM16H_j           //j
+#define COM16L_k          ~COM16H_k           //k
+#define COM16L_l          ~COM16H_l           //l
+#define COM16L_m          ~COM16H_m           //m
+#define COM16L_n          ~COM16H_n           //n
+#define COM16L_o          ~COM16H_o           //o
+#define COM16L_p          ~COM16H_p           //p
+#define COM16L_q          ~COM16H_q           //q
+#define COM16L_r          ~COM16H_r           //r
+#define COM16L_s          ~COM16H_s           //s
+#define COM16L_t          ~COM16H_t           //t
+#define COM16L_u          ~COM16H_u           //u
+#define COM16L_v          ~COM16H_v           //v
+#define COM16L_w          ~COM16H_w           //w
+#define COM16L_x          ~COM16H_x           //x
+#define COM16L_y          ~COM16H_y           //y
+#define COM16L_z          ~COM16H_z           //z
 
 //COM High(Others Sort: . N M L K J H G2 G1 F E D2 D1 C B A2 A1)
-#define COMH_PERCENT    0x12456            // '%'
-#define COMH_PLUS       0x1B4FF            // '+'
-#define COMH_MINUS      0x1FCFF            // '-'
-#define COMH_MUTIPLE    0x100FF            // '*'
-#define COMH_DIVIDE     0x16FFF            // '/'
-#define COMH_MOD        0x1DBFF            // '\'
-#define COMH_FBRACKET   0x1FF2E            // '['
-#define COMH_BBRACKET   0x1FFDE            // ']'
-#define COMH_EQ         0x1FCCF            // '='
-#define COMH_GT         0x17BFF            // '>'
-#define COMH_LT         0x1CFFF            // '<'
-#define COMH_GTEQ       0x17BEF            // '>='
-#define COMH_LTEQ       0x1CFDF            // '<='
-#define COMH_XOR        0x15FFF            // 'XOR'
+#define COM16H_PERCENT    0x12456            // '%'
+#define COM16H_PLUS       0x1B4FF            // '+'
+#define COM16H_MINUS      0x1FCFF            // '-'
+#define COM16H_MUTIPLE    0x100FF            // '*'
+#define COM16H_DIVIDE     0x16FFF            // '/'
+#define COM16H_MOD        0x1DBFF            // '\'
+#define COM16H_FBRACKET   0x1FF2E            // '['
+#define COM16H_BBRACKET   0x1FFDE            // ']'
+#define COM16H_EQ         0x1FCCF            // '='
+#define COM16H_GT         0x17BFF            // '>'
+#define COM16H_LT         0x1CFFF            // '<'
+#define COM16H_GTEQ       0x17BEF            // '>='
+#define COM16H_LTEQ       0x1CFDF            // '<='
+#define COM16H_XOR        0x15FFF            // 'XOR'
 
 //COM Low(Others Sort: . N M L K J H G2 G1 F E D2 D1 C B A2 A1)
-#define COML_PERCENT    ~COMH_PERCENT      // '%'
-#define COML_PLUS       ~COMH_PLUS         // '+'
-#define COML_MINUS      ~COMH_MINUS        // '-'
-#define COML_MUTIPLE    ~COMH_MUTIPLE      // '*'
-#define COML_DIVIDE     ~COMH_DIVIDE       // '/'
-#define COML_MOD        ~COMH_MOD          // '\'
-#define COML_FBRACKET   ~COMH_FBRACKET     // '['
-#define COML_BBRACKET   ~COMH_BBRACKET     // ']'
-#define COML_EQ         ~COMH_EQ           // '='
-#define COML_GT         ~COMH_GT           // '>'
-#define COML_LT         ~COMH_LT           // '<'
-#define COML_GTEQ       ~COMH_GTEQ         // '>='
-#define COML_LTEQ       ~COMH_LTEQ         // '<='
-#define COML_SIGMA      ~COMH_SIGMA        // 'Sum'   
-#define COML_XOR        ~COMH_XOR          // 'XOR'
+#define COM16L_PERCENT    ~COM16H_PERCENT    // '%'
+#define COM16L_PLUS       ~COM16H_PLUS       // '+'
+#define COM16L_MINUS      ~COM16H_MINUS      // '-'
+#define COM16L_MUTIPLE    ~COM16H_MUTIPLE    // '*'
+#define COM16L_DIVIDE     ~COM16H_DIVIDE     // '/'
+#define COM16L_MOD        ~COM16H_MOD        // '\'
+#define COM16L_FBRACKET   ~COM16H_FBRACKET   // '['
+#define COM16L_BBRACKET   ~COM16H_BBRACKET   // ']'
+#define COM16L_EQ         ~COM16H_EQ         // '='
+#define COM16L_GT         ~COM16H_GT         // '>'
+#define COM16L_LT         ~COM16H_LT         // '<'
+#define COM16L_GTEQ       ~COM16H_GTEQ       // '>='
+#define COM16L_LTEQ       ~COM16H_LTEQ       // '<='
+#define COM16L_SIGMA      ~COM16H_SIGMA      // 'Sum'   
+#define COM16L_XOR        ~COM16H_XOR        // 'XOR'
 
 //[Enum Declare]
 typedef enum _SEG16_PIN
